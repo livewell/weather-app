@@ -1,6 +1,6 @@
 const request = require('request');
 
-function geocodeAddress(address, callback){
+var geocodeAddress = (address, callback) => {
     var addressURI = encodeURIComponent(address);
 
     request({
@@ -23,4 +23,4 @@ function geocodeAddress(address, callback){
 }
 
 
-exports.geocodeAddress = geocodeAddress;
+module.exports.geocodeAddress = geocodeAddress;
